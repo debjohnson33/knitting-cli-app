@@ -4,37 +4,48 @@ require "./lib/knitting_cli/version"
 class KnittingCli::CLI
   
   def call
-  	
+  	puts "Today's top new knitting patterns:"
   	menu
-  	list_patterns
-  	goodbye
-  end
-
-
-  def list_patterns
-
-  	#puts <<-DOC
-  	#	1. 2017 Knit Dishcloth - Easy
-	#	2. Adult Knit Crew Neck Cardigan - Easy
-  	#DOC
-
   end
 
   def menu
-  	puts "Today's top new knitting patterns:"
-  	input = nil
-  	while input != "exit"
-  		puts "Enter the numbers of the list you want to see: 1-10, 11-20, 21-30, 31-40, 41-50 or type exit:"
+  	
+  	puts "Enter the numbers of the list you want to see: 1-10, 11-20, 21-30, 31-40, 41-50:"
+ 		input = gets.strip.to_i
+
+ 		list_patterns(input)
+
+ 		puts ""
+ 		puts "Which pattern would you like more information on?"
+ 		input = gets.strip
+
+ 		# code to use scraper here
+
+ 		print_pattern
+
+ 		puts ""
+ 		puts "Would you like to see another pattern? Enter Y or N"
+
  		input = gets.strip.downcase
- 		case input
- 		when "1-10"
- 			puts "1-10 Knitting patterns"
- 		when "11-20"
- 			puts "11-20 Knitting patterns"
+
+ 		if input == "y"
+ 			menu
  		else
- 			puts "Not sure what you want. Type the numbers of the list you want to see or exit."
+ 			goodbye
  		end
- 	end
+
+  end
+
+  def list_patterns(number) # to list out the patterns in blocks of 10
+
+  	puts ""
+  	puts "Knitting Patterns #{number} - #{number + 9}"
+
+  end
+
+  def print_pattern #put scraped info here
+  	puts "2. Adult Knit Crew Neck Cardigan - Free Pattern - Button up in this perfectly simple Crew Neck Cardigan. Knitted in Caron Simply Soft, It’s so easy to make! 
+Download Pattern here: https://s3.amazonaws.com/spinrite/pdf/July-2016-new/CARON-SIMPLYSOFT-K-AdultsKnitCrewNeckCardigan-WEB.pdf"
   end
 
   def goodbye
