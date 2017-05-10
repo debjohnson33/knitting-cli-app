@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
 
-Knitting::CLI.new.call
+require './lib/knitting_cli'
+
+puts "Hello"
+KnittingCli::CLI.new.call
+

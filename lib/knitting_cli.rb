@@ -1,4 +1,5 @@
-require "knitting_cli/version"
+require_relative '../config/environment'
+
 
 module KnittingCli
   # Your code goes here...
