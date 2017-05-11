@@ -8,10 +8,16 @@ class KnittingCli::Scraper
 		self.get_page.css("li.item")
 	end
 
-	def make_patterns
+	def make_pattern_list
 		scrape_index.each do |p|
-			
+			pattern = KnittingCli::Pattern.is_new
+			pattern.name =  p.css("h2.product-name")
+			pattern.yarn_brand = p.css("div.product-info a")
 		end
+	end
+
+	def make_patterns
+		
 		
 	end
 end
