@@ -5,12 +5,12 @@ class KnittingCli::Scraper
 	end
 
 	def scrape_index
-		self.get_page.css("li.item last")
+		self.get_page.css("li.item")
 	end
 
 	def make_patterns
-		self.scrape_index.each do ||
-
+		scrape_index.each do |p|
+			
 		end
 		
 	end
