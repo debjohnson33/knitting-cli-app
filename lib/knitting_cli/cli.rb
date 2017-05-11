@@ -20,6 +20,7 @@ class KnittingCli::CLI
  		input = gets.strip
 
  		doc = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/knitting-patterns?dir=desc&limit=36&order=is_new"))
+ 		page = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/lily-sugar-n-cream-2017-knit-dishcloth.html?id=201589"))
  		binding.pry
  		# code to use scraper here
 
