@@ -26,17 +26,17 @@ class KnittingCli::Pattern
 	def self.find(input)
 		self.all[input - 1]	
 	end
+
+	def price
+		@price ||= pattern_page.css("p.no-eng a.download-link").text 
+	end
 	
 	def description
-		@description ||= pattern_page.css("div.std").text
+		@description ||= pattern_page.css("div.std").first.text
 	end
 
-	#def price
-	#	@price ||= pattern_page.css("p.no-eng a.download-link").text 
-	#end
-
 	def pattern_page
-		@pattern_page ||= Nokogiri::HTML(open(url))
+		@pattern_page = Nokogiri::HTML(open(url))
 	end
 
 	def knitting_list

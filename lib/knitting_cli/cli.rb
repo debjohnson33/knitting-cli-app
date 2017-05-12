@@ -21,7 +21,7 @@ class KnittingCli::CLI
  		input = gets.strip
 
  		# doc = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/knitting-patterns?dir=desc&limit=36&order=is_new"))
- 		# page = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/lily-sugar-n-cream-2017-knit-dishcloth.html?id=201589"))
+ 		 page = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/lily-sugar-n-cream-2017-knit-dishcloth.html?id=201589"))
  		
  		# binding.pry
  		# code to use scraper here
@@ -58,8 +58,8 @@ class KnittingCli::CLI
   	puts ""
   	puts "Name: #{pattern.name.strip}"
   	puts "Yarn Brand: #{pattern.yarn_brand.strip}"
-  #	puts "Price: #{pattern.price}"
-  #	puts "#{pattern.description}"
+  	puts "Price: #{pattern.price}"
+  	puts "Description: #{pattern.description}"
   	puts "Website: #{pattern.url}"
   
   end
