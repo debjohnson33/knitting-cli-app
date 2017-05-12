@@ -3,7 +3,11 @@ class KnittingCli::Pattern
 
 	@@all = []
 
-	def initialize
+	def initialize(name, yarn_brand, price, url)
+		@name = name
+		@yarn_brand = yarn_brand
+		@price = price
+		@url = url
 		@@all << self
 	end
 
