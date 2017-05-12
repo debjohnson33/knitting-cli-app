@@ -3,7 +3,7 @@ class KnittingCli::Pattern
 
 	@@all = []
 
-	def initialize(name, yarn_brand, price, url)
+	def initialize(name = nil, yarn_brand = nil, price = nil, url = nil)
 		@name = name
 		@yarn_brand = yarn_brand
 		@price = price
@@ -29,11 +29,11 @@ class KnittingCli::Pattern
 	end
 	
 	def description
-		@description = pattern_page.css("div.std").text
+		@description ||= pattern_page.css("div.std").text
 	end
 
 	def pattern_page
-		@pattern_page = Nokogiri::HTML(open(self.url))
+		@pattern_page ||= Nokogiri::HTML(open(url))
 	end
 
 	def knitting_list

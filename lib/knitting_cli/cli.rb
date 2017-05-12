@@ -24,10 +24,10 @@ class KnittingCli::CLI
  		# page = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/lily-sugar-n-cream-2017-knit-dishcloth.html?id=201589"))
  		
  		# code to use scraper here
+ 		pattern = KnittingCli::Pattern.find(input.to_i)
 
-
- 		print_pattern
- 		binding.pry
+ 		print_pattern(pattern)
+ 		# binding.pry
 
  		puts ""
  		puts "Would you like to see another pattern? Enter Y or N"
@@ -53,9 +53,14 @@ class KnittingCli::CLI
 
   end
 
-  def print_pattern #put scraped info here
-  	puts "2. Adult Knit Crew Neck Cardigan - Free Pattern - Button up in this perfectly simple Crew Neck Cardigan. Knitted in Caron Simply Soft, It’s so easy to make! 
-Download Pattern here: https://s3.amazonaws.com/spinrite/pdf/July-2016-new/CARON-SIMPLYSOFT-K-AdultsKnitCrewNeckCardigan-WEB.pdf"
+  def print_pattern(pattern) #put scraped info here
+  	puts ""
+  	puts "#{pattern.name}"
+  	puts "#{pattern.yarn_brand}"
+  	puts "#{pattern.price}"
+  	puts "#{pattern.description}"
+  	puts "#{pattern.url}"
+  
   end
 
   def goodbye
