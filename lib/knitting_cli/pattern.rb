@@ -6,7 +6,6 @@ class KnittingCli::Pattern
 	def initialize(name = nil, yarn_brand = nil, url = nil)
 		@name = name
 		@yarn_brand = yarn_brand
-		@price = price
 		@url = url
 		@@all << self
 	end
@@ -27,6 +26,10 @@ class KnittingCli::Pattern
 		self.all[input - 1]	
 	end
 
+	def pattern_page
+		@pattern_page ||= Nokogiri::HTML(open(url))
+	end
+
 	def price
 		@price ||= pattern_page.css("p.no-eng a.download-link").text 
 	end
@@ -35,9 +38,6 @@ class KnittingCli::Pattern
 		@description ||= pattern_page.css("div.std").first.text
 	end
 
-	def pattern_page
-		@pattern_page = Nokogiri::HTML(open(url))
-	end
 
 	def knitting_list
 		# KnittingCli::Scraper.scrape_index
