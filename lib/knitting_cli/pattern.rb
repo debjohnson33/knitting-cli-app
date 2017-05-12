@@ -16,7 +16,7 @@ class KnittingCli::Pattern
 			p.css("h2.product-name").text,
 			p.css("a.brand-link").text,
 			p.css("p a.download-link").text,
-			p.attribute('href')
+			p.css("h2.product-name a").attribute('href').text
 		)	
 	end
 
