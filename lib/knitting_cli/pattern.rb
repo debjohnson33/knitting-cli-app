@@ -1,5 +1,5 @@
 class KnittingCli::Pattern
-	attr_accessor :name, :yarn_brand, :price, :description
+	attr_accessor :name, :yarn_brand, :price, :description, :url
 
 	@@all = []
 

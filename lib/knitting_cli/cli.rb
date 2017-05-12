@@ -19,12 +19,15 @@ class KnittingCli::CLI
  		puts "Which pattern would you like more information on?"
  		input = gets.strip
 
- 		doc = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/knitting-patterns?dir=desc&limit=36&order=is_new"))
- 		page = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/lily-sugar-n-cream-2017-knit-dishcloth.html?id=201589"))
- 		binding.pry
+ 		# doc = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/knitting-patterns?dir=desc&limit=36&order=is_new"))
+ 		# page = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/lily-sugar-n-cream-2017-knit-dishcloth.html?id=201589"))
+ 		
  		# code to use scraper here
 
+ 		KnittingCli::Scraper.new.make_pattern_list
+
  		print_pattern
+ 		binding.pry
 
  		puts ""
  		puts "Would you like to see another pattern? Enter Y or N"
