@@ -20,11 +20,6 @@ class KnittingCli::CLI
  		puts "Which pattern would you like more information on?"
  		input = gets.strip
 
- 		# doc = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/knitting-patterns?dir=desc&limit=36&order=is_new"))
- 		 page = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/lily-sugar-n-cream-2017-knit-dishcloth.html?id=201589"))
- 		
- 		# binding.pry
- 		# code to use scraper here
  		pattern = KnittingCli::Pattern.find(input.to_i)
 
  		print_pattern(pattern)
@@ -43,7 +38,7 @@ class KnittingCli::CLI
 
   end
 
-  def list_patterns(number) # to list out the patterns in blocks of 10
+  def list_patterns(number) 
 
   	puts ""
   	puts "Knitting Patterns #{number} - #{number + 11}"
@@ -54,7 +49,7 @@ class KnittingCli::CLI
 
   end
 
-  def print_pattern(pattern) #put scraped info here
+  def print_pattern(pattern) 
   	puts ""
   	puts "Name: #{pattern.name.strip}"
   	puts "Yarn Brand: #{pattern.yarn_brand.strip}"
