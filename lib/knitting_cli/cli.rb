@@ -23,11 +23,12 @@ class KnittingCli::CLI
  		# doc = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/knitting-patterns?dir=desc&limit=36&order=is_new"))
  		# page = Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/lily-sugar-n-cream-2017-knit-dishcloth.html?id=201589"))
  		
+ 		# binding.pry
  		# code to use scraper here
  		pattern = KnittingCli::Pattern.find(input.to_i)
 
  		print_pattern(pattern)
- 		# binding.pry
+ 		
 
  		puts ""
  		puts "Would you like to see another pattern? Enter Y or N"
