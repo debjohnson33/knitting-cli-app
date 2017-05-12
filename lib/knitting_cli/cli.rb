@@ -4,6 +4,7 @@ require "./lib/knitting_cli/version"
 class KnittingCli::CLI
   
   def call
+  	KnittingCli::Scraper.new.make_patterns
   	puts "Today's top new knitting patterns:"
   	menu
   end
@@ -24,7 +25,6 @@ class KnittingCli::CLI
  		
  		# code to use scraper here
 
- 		pattern = KnittingCli::Scraper.new.make_pattern_list
 
  		print_pattern
  		binding.pry
@@ -46,6 +46,10 @@ class KnittingCli::CLI
 
   	puts ""
   	puts "Knitting Patterns #{number} - #{number + 11}"
+  	puts ""
+  	KnittingCli::Pattern.all[number - 1, 12].each.with_index(number) do |pattern, index|
+		puts "#{index}. #{pattern.name}"  		
+  	end
 
   end
 
