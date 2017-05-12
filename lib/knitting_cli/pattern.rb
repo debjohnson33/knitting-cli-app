@@ -13,9 +13,9 @@ class KnittingCli::Pattern
 
 	def self.new_from_site(p)
 		self.new(
-			p.css("h2.product-name").text
-			p.css("div.product-info a").text
-			p.css("p a.download-link").text
+			p.css("h2.product-name").text,
+			p.css("div.product-info a").text,
+			p.css("p a.download-link").text,
 			p.attribute('href')
 		)	
 	end

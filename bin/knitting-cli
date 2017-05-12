@@ -2,6 +2,6 @@
 
 require './lib/knitting_cli'
 
-puts "Hello"
+
 KnittingCli::CLI.new.call
 
