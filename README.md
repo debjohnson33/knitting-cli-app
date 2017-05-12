@@ -1,15 +1,12 @@
 # KnittingCli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/knitting_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Ruby Gem provides a CLI to view the first 36 new knitting patterns listed on the Yarnspirations.com website.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'knitting_cli'
+```ruby gem 'knitting_cli'
 ```
 
 And then execute:
@@ -22,7 +19,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Type knitting-cli at the prompt (as below) and follow the directions on the screen.
+
+	$ knitting-cli
 
 ## Development
 
@@ -33,4 +32,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/knitting_cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
