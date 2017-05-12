@@ -15,7 +15,7 @@ class KnittingCli::Scraper
 			pattern.yarn_brand = p.css("div.product-info a")
 		
 			pattern.url = p.attribute('href')
-		   	pattern.description = pattern.url.css("div.std").text
+		 #  	pattern.description = pattern.url.css("div.std").text
 		end
 	end
 

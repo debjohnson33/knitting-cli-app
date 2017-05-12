@@ -24,7 +24,7 @@ class KnittingCli::CLI
  		
  		# code to use scraper here
 
- 		KnittingCli::Scraper.new.make_pattern_list
+ 		pattern = KnittingCli::Scraper.new.make_pattern_list
 
  		print_pattern
  		binding.pry
