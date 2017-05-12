@@ -28,13 +28,13 @@ class KnittingCli::Pattern
 		self.all[input - 1]	
 	end
 	
-	def description
-		@description ||= pattern_page.css("div.std").text
-	end
+	#def description
+	#	@description ||= pattern_page.css("div.std").text
+	#end
 
-	def pattern_page
-		@pattern_page ||= Nokogiri::HTML(open(url))
-	end
+	#def pattern_page
+	#	@pattern_page ||= Nokogiri::HTML(open(url))
+	#end
 
 	def knitting_list
 		# KnittingCli::Scraper.scrape_index

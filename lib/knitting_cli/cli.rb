@@ -55,11 +55,11 @@ class KnittingCli::CLI
 
   def print_pattern(pattern) #put scraped info here
   	puts ""
-  	puts "#{pattern.name}"
-  	puts "#{pattern.yarn_brand}"
-  	puts "#{pattern.price}"
-  	puts "#{pattern.description}"
-  	puts "#{pattern.url}"
+  	puts "Name: #{pattern.name.strip}"
+  	puts "Yarn Brand: #{pattern.yarn_brand.strip}"
+  	puts "Price: #{pattern.price}"
+  #	puts "#{pattern.description}"
+  	puts "Website: #{pattern.url}"
   
   end
 
