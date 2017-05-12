@@ -8,22 +8,10 @@ class KnittingCli::Scraper
 		self.get_page.css("li.item")
 	end
 
-	def make_pattern_list
-		scrape_index.each do |p|
-			KnittingCli::Pattern.new_from_site
-		end
-
-			pattern = KnittingCli::Pattern.new
-			pattern.name =  p.css("h2.product-name")
-			pattern.yarn_brand = p.css("div.product-info a")
-		
-			pattern.url = p.attribute('href')
-		 #  	pattern.description = pattern.url.css("div.std").text
-		
-	end
-
 	def make_patterns
-
-		
+		scrape_index.each do |p|
+			KnittingCli::Pattern.new_from_site(p)
+		end
 	end
+
 end

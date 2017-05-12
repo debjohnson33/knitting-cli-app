@@ -17,13 +17,19 @@ class KnittingCli::Pattern
 			p.css("div.product-info a").text
 			p.css("p a.download-link").text
 			p.attribute('href')
-		 #  	pattern.description = pattern.url.css("div.std").text
-
 		)	
 	end
 
 	def self.all
 		@@all
+	end
+	
+	def description
+		@description = pattern_page.css("div.std").text
+	end
+
+	def pattern_page
+		@pattern_page = Nokogiri::HTML(open(self.url))
 	end
 	
 	def knitting_list
@@ -36,6 +42,7 @@ class KnittingCli::Pattern
 	def pattern_info
 		# price = page.css("p a.download-link").text
 		# description = page.css("div.std").text
+		# pattern.description = pattern.url.css("div.std").text
 	end
 	
 
