@@ -11,6 +11,17 @@ class KnittingCli::Pattern
 		@@all << self
 	end
 
+	def self.new_from_site(p)
+		self.new(
+			p.css("h2.product-name").text
+			p.css("div.product-info a").text
+			p.css("p a.download-link").text
+			p.attribute('href')
+		 #  	pattern.description = pattern.url.css("div.std").text
+
+		)	
+	end
+
 	def self.all
 		@@all
 	end

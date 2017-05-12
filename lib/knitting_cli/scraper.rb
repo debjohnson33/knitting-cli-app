@@ -10,13 +10,16 @@ class KnittingCli::Scraper
 
 	def make_pattern_list
 		scrape_index.each do |p|
+			KnittingCli::Pattern.new_from_site
+		end
+
 			pattern = KnittingCli::Pattern.new
 			pattern.name =  p.css("h2.product-name")
 			pattern.yarn_brand = p.css("div.product-info a")
 		
 			pattern.url = p.attribute('href')
 		 #  	pattern.description = pattern.url.css("div.std").text
-		end
+		
 	end
 
 	def make_patterns
