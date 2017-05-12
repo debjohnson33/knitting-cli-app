@@ -23,6 +23,10 @@ class KnittingCli::Pattern
 	def self.all
 		@@all
 	end
+
+	def self.find(input)
+		self.all[input - 1]	
+	end
 	
 	def description
 		@description = pattern_page.css("div.std").text
@@ -31,7 +35,7 @@ class KnittingCli::Pattern
 	def pattern_page
 		@pattern_page = Nokogiri::HTML(open(self.url))
 	end
-	
+
 	def knitting_list
 		# KnittingCli::Scraper.scrape_index
 		# name =  doc.css("h2.product-name")
