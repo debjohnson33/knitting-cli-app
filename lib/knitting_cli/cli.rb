@@ -52,9 +52,13 @@ class KnittingCli::CLI
   def print_pattern(pattern) 
   	puts ""
   	puts "Name: #{pattern.name.strip}"
+  	puts ""
   	puts "Yarn Brand: #{pattern.yarn_brand.strip}"
+  	puts ""
   	puts "Price: #{pattern.price}"
+  	puts ""
   	puts "Description: #{pattern.description}"
+  	puts ""
   	puts "Website: #{pattern.url}"
   
   end
