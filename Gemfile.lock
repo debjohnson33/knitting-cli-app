@@ -8,9 +8,9 @@ GEM
   specs:
     coderay (1.1.1)
     method_source (0.8.2)
-    mini_portile2 (2.1.0)
-    nokogiri (1.7.1)
-      mini_portile2 (~> 2.1.0)
+    mini_portile2 (2.3.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -24,9 +24,9 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.14)
   knitting_cli!
-  nokogiri
+  nokogiri (~> 1.8.2)
   pry
   rake (~> 10.0)
 
 BUNDLED WITH
-   1.14.6
+   1.16.1
