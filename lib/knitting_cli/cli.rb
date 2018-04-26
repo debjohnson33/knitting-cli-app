@@ -53,7 +53,7 @@ class KnittingCli::CLI
   	puts ""
   	puts "Name: #{pattern.name.strip}"
   	puts ""
-  	puts "Yarn Brand: #{pattern.yarn_brand.strip}"
+  	puts "Yarn Brand: #{pattern.yarn_brand}"
   	puts ""
   	puts "Price: #{pattern.price}"
   	puts ""

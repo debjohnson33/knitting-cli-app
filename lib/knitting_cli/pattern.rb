@@ -11,10 +11,12 @@ class KnittingCli::Pattern
 	end
 
 	def self.new_from_site(p)
+		url_ending = p.css("a.name-link").attribute('href').text
+		url = `http://www.yarnspirations.com#{url_ending}`
 		self.new(
-			p.css("h2.product-name").text.strip,
-			p.css("a.brand-link").text,
-			p.css("h2.product-name a").attribute('href').text
+			p.css("a.thumb-link").attribute('title').text.strip,
+			p.css("a.thumb-link").attribute('data-gtmdata.brand'),
+			url
 		)	
 	end
 

@@ -5,7 +5,7 @@ class KnittingCli::Scraper
 	end
 
 	def scrape_index
-		self.get_page.css("li.item")
+		self.get_page.css("li.grid-tile")
 	end
 
 	def make_patterns
