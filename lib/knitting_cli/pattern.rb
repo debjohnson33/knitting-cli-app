@@ -1,5 +1,5 @@
 class KnittingCli::Pattern
-	attr_accessor :name, :yarn_brand, :price, :description, :url
+	attr_accessor :name, :yarn_brand, :skill_level, :description, :url
 
 	@@all = []
 
@@ -11,12 +11,11 @@ class KnittingCli::Pattern
 	end
 
 	def self.new_from_site(p)
-		url_ending = p.css("a.name-link").attribute('href').text
-		url = `http://www.yarnspirations.com#{url_ending}`
+		url_ending = p.css("a.name-link").attribute('href').text 
 		self.new(
 			p.css("a.thumb-link").attribute('title').text.strip,
 			p.css("a.thumb-link").attribute('data-gtmdata.brand'),
-			url
+			`http://www.yarnspirations.com#{url_ending}`
 		)	
 	end
 
@@ -29,11 +28,11 @@ class KnittingCli::Pattern
 	end
 
 	def pattern_page
-		@pattern_page ||= Nokogiri::HTML(open(url))
+		@pattern_page ||= Nokogiri::HTML(open(@url))
 	end
 
-	def price
-		@price ||= pattern_page.css("p.no-eng a.download-link").text 
+	def skill_level
+		@skill_level ||= pattern_page.css("span.skill-lvl-text").text 
 	end
 	
 	def description
