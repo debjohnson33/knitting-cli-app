@@ -11,7 +11,7 @@ class KnittingCli::CLI
 
   def menu
   	
-  	puts "Enter the numbers of the list you want to see: 1-12, 13-24, 25-36:"
+  	puts "Enter the numbers of the list you want to see: 1-12, 13-24:"
  		input = gets.strip.to_i
 
  		list_patterns(input)

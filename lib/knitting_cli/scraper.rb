@@ -1,7 +1,7 @@
 class KnittingCli::Scraper
 
 	def get_page
-		Nokogiri::HTML(open("http://www.yarnspirations.com/patterns/knitting-patterns?dir=desc&limit=36&order=is_new"))
+		Nokogiri::HTML(open("http://www.yarnspirations.com/knit-patterns?sz=24"))
 	end
 
 	def scrape_index

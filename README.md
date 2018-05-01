@@ -1,6 +1,6 @@
 # KnittingCli
 
-This Ruby Gem provides a CLI to view the first 36 new knitting patterns listed on the Yarnspirations.com website.
+This Ruby Gem provides a CLI to view the first 24 new knitting patterns listed on the Yarnspirations.com website.
 
 ## Installation
 
