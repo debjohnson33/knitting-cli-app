@@ -55,7 +55,7 @@ class KnittingCli::CLI
   	puts ""
   	puts "Yarn Brand: #{pattern.yarn_brand}"
   	puts ""
-  	puts "Price: #{pattern.skill_level}"
+  	puts "Skill Level: #{pattern.skill_level}"
   	puts ""
   	puts "Description: #{pattern.description}"
   	puts ""

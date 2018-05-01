@@ -15,7 +15,7 @@ class KnittingCli::Pattern
 		self.new(
 			p.css("a.thumb-link").attribute('title').text.strip,
 			p.css("a.thumb-link").attribute('data-gtmdata.brand'),
-			`http://www.yarnspirations.com#{url_ending}`
+			"http://www.yarnspirations.com#{url_ending}"
 		)	
 	end
 
@@ -36,7 +36,7 @@ class KnittingCli::Pattern
 	end
 	
 	def description
-		@description ||= pattern_page.css("div.std").first.text
+		@description ||= pattern_page.css("div.short-description").text.strip
 	end	
 
 end
