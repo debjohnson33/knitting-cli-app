@@ -6,11 +6,11 @@ Example:
 
 User types in knitting-cli at the command line prompt
 
-Top 36 New Knitting Patterns
+Top 24 New Knitting Patterns
 
-Choose 1-12, 13-24, 25-36
+Choose 1-12, 13-24
 
-User input => 1-10
+User input => 1-12
 
 1. 2017 Knit Dishcloth
 2. Adult Knit Crew Neck Cardigan

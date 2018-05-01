@@ -19,9 +19,9 @@ Or install it yourself as:
 
 ## Usage
 
-Type knitting-cli at the prompt (as below) and follow the directions on the screen.
+Type ./bin/knitting-cli at the prompt (as below) and follow the directions on the screen.
 
-	$ knitting-cli
+	$ ./bin/knitting-cli
 
 ## Development
 
